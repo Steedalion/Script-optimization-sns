@@ -1,5 +1,5 @@
 # Script optimization
-[link](https://learn.unity.com/project/c-scripting-in-unity-script-optimizatio)
+[link](https://learn.unity.com/project/c-scripting-in-unity-script-optimization)
 
 Unity prototype
 
