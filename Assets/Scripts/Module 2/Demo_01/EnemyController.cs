@@ -42,8 +42,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-	        Destroy(gameObject);
-	        //Debug.Log("Test12");
+            Destroy(gameObject);
 
         }
     }

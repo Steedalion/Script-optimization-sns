@@ -12,7 +12,7 @@ public class BulletController : MonoBehaviour
     private string[] makeMeHeavy = new string[750000];
     
     // Start is called before the first frame update
-    private void Start()
+    private void OnEnable()
     {
         myTransform = transform;
 
@@ -26,7 +26,7 @@ public class BulletController : MonoBehaviour
     {
         if (myTransform.position.y > maxVerticalPosition)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
  

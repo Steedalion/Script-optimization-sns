@@ -2,7 +2,7 @@
 
 public class PlayerShipController : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab;
+    private ObjectPool objectPool;
     
     private Transform myTransform;
   
@@ -11,11 +11,15 @@ public class PlayerShipController : MonoBehaviour
     {
         myTransform = transform;
 
+        objectPool = GetComponent<ObjectPool>();
+
         InvokeRepeating("Shoot", .33f, .33f);
     }
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, myTransform.position, Quaternion.identity);
+        GameObject bullet = objectPool.GetAvailableObject();
+        bullet.transform.position = myTransform.position;
+        bullet.SetActive(true);
     }
 }
