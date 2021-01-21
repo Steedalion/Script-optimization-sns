@@ -7,8 +7,6 @@ public class PlayerShipController : MonoBehaviour
 	private Transform myTransform;
 	AudioSource asource;
 	public AudioClip clip;
-
-	public Color color1, color2;
 	
     // Start is called before the first frame update
     void Start()
@@ -24,7 +22,8 @@ public class PlayerShipController : MonoBehaviour
     {
         GameObject bullet = objectPool.GetAvailableObject();
         bullet.transform.position = myTransform.position;
-	    bullet.SetActive(true);
+	    bullet.SetActive(true); 
+	    
 	    playSoundAtRandomPitch(clip);
     }
     
