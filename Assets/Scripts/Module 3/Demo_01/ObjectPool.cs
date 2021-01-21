@@ -11,6 +11,9 @@ public class ObjectPool : MonoBehaviour
 	
 	readonly List<GameObject> pool = new List<GameObject>();
 
+    /// <summary>
+    /// Comentary stuff.
+    /// </summary>
     private void Awake()
     {
         for (int i = 0; i < poolDepth; i++)
